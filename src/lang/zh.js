@@ -22,7 +22,7 @@ export default {
     newPwdAgain: '请确认修改密码'
   },
   common: {
-    title: 'Vue Template',
+    title: '系统管理',
     search: '查询',
     reset: '重置',
     add: '新增',
@@ -82,9 +82,9 @@ export default {
     en: 'English',
     goBack: '返回首页',
     copyright: 'Copyright @ 2020 简单易用的企业端管理系统',
-    systemTile: 'Vue Template Pro',
-    systemName: 'Vue Template',
-    systemDescription: 'Vue Template Pro is the most influential web design specification',
+    systemTile: '系统管理 Pro',
+    systemName: '系统管理',
+    systemDescription: '系统管理 Pro is the most influential web design specification',
     loginCoryright: '2020 All Rights Reserved 版权所有'
   },
   otherBusinessModule: {

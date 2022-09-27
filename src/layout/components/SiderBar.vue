@@ -291,14 +291,14 @@ aside {
 
 <style>
 .el-menu-item.is-active {
-  background-color: #1890ff !important;
-  color: #fff !important;
+  /* background-color: #1890ff !important; */
+  /* color: #fff !important; */
 }
 .el-menu-item.is-active i {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .el-menu-item.is-active span {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 .el-submenu__icon-arrow {
   right: 25px;

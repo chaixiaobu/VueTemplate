@@ -2,11 +2,11 @@
   <div class="header-layout">
     <div class="header-container">
       <div class="right-container">
-        <div class="right-item" style="padding-top: 3px">
+        <!-- <div class="right-item" style="padding-top: 3px">
           <el-badge :value="newsNumber" class="item">
             <i class="el-icon-bell"></i>
           </el-badge>
-        </div>
+        </div> -->
         <div class="right-item user-container">
           <el-avatar
             size="small"
@@ -37,7 +37,7 @@
             </el-dropdown-menu>
           </el-dropdown>
         </div>
-        <div class="right-item language-container">
+        <!-- <div class="right-item language-container">
           <el-dropdown placement="bottom">
             <i class="language-icon"></i>
             <el-dropdown-menu slot="dropdown">
@@ -45,7 +45,7 @@
               <el-dropdown-item>{{ $t("common.en") }}</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -68,15 +68,16 @@ export default {
 
     /**
      * @description 点击操作
-     * @returns void 
+     * @returns void
      */
     handleCommand(command) {
       switch (command) {
         case 'logout':
           resetTokenAndClearUser()
           this.$router.push('/login')
+          break
         default:
-          return
+          break
       }
     }
   }
@@ -101,7 +102,7 @@ export default {
     .right-container {
       float: right;
       height: 100%;
-      min-width: 180px;
+    //   min-width: 180px;
       .right-item {
         height: 100%;
         margin-right: 30px;

@@ -65,7 +65,7 @@
       </el-form>
     </div>
     <div class="version-container">
-      &copy; {{ $t("common.loginCoryright") }} {{ this.versionCode }}
+      &copy; {{ $t("common.loginCoryright") }}
     </div>
   </div>
 </template>
@@ -82,39 +82,12 @@ export default {
         password: 'admin' // 密码
       },
       loading: false,
-      redirect: undefined,
-      versionCode: '@1.0.0.20200820_beta',
-      version: undefined,
-      versions: undefined
+      redirect: undefined
     }
-  },
-  created() {
-    this.getVersionLog()
   },
   mounted() {
   },
   methods: {
-
-    /**
-     * @description 获取版本信息
-     * @returns void
-     */
-    getVersionLog() {
-      const that = this
-      this.versions = require('@/version/version.json')
-      if (this.versions.length > 0) {
-        this.version = this.versions[this.versions.length - 1]
-        if (this.version != undefined) {
-          this.versionCode = this.version.version
-        }
-        window['versions'] = JSON.parse(JSON.stringify(this.versions))
-        window['version'] = JSON.parse(JSON.stringify(this.version))
-      } else {
-        window['versions'] = []
-        window['version'] = undefined
-      }
-    },
-
     /**
      * @description 登陆操作
      * @return void
@@ -134,30 +107,32 @@ export default {
 
 <style lang="scss">
 .login-container {
-  .login-main {
-    .el-input {
-      display: inline-block;
-      height: 36px;
-      width: 85%;
+    display: flex;
+    justify-content: center;
+    .login-main {
+        .el-input {
+            display: inline-block;
+            height: 36px;
+            width: 85%;
 
-      input {
-        background: transparent;
-        border: 0px;
-        -webkit-appearance: none;
-        border-radius: 0px;
-        padding: 0px 5px 0px 10px;
-        color: #000000;
-        height: 36px;
-        caret-color: #000000;
-        box-shadow: inset 0 0 0 1000px #ffffff !important;
-      }
-    }
+            input {
+                background: transparent;
+                border: 0px;
+                -webkit-appearance: none;
+                border-radius: 0px;
+                padding: 0px 5px 0px 10px;
+                color: #000000;
+                height: 36px;
+                caret-color: #000000;
+                box-shadow: inset 0 0 0 1000px #ffffff !important;
+            }
+        }
 
-    .el-form-item {
-      border-bottom: 1px solid #cbcfd9;
-      margin-bottom: 35px;
+        .el-form-item {
+            border-bottom: 1px solid #cbcfd9;
+            margin-bottom: 35px;
+        }
     }
-  }
 }
 </style>
 

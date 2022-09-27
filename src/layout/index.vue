@@ -70,7 +70,7 @@ export default {
   }
   .main-container {
     position: relative;
-    margin: 24px;
+    margin: 15px;
     flex: auto;
     min-height: 0;
     .main-container-content {
